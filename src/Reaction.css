@@ -1,0 +1,44 @@
+button#reactionButton {
+    position: relative;
+    font-size: 24px;
+    line-height: 36px;
+    height: 36px;
+}
+
+.static {
+    position: relative;
+    display: inline-block;
+    line-height: 36px;
+    height: 36px;
+}
+
+.to-animate {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: inline-block;
+    line-height: 36px;
+    height: 36px;
+}
+
+.reacted .to-animate {
+    top: 0%;
+    display: none;
+    color: red;
+}
+
+.reacting .to-animate {
+    animation-name: reacted-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.unreacting .to-animate {
+    animation-name: reacted-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+@keyframes reacted-anim {
+    from {transform:translateY(0%)}
+    to {transform:translateY(-100%)}
+  }
