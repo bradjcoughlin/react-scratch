@@ -12,6 +12,12 @@ class App extends Component{
         <Button/>
         <hr/>
         <Reaction/>
+        <Reaction/>
+        <Reaction/>
+        <Reaction/>
+        <Reaction/>
+        <Reaction/>
+        <Reaction/>
       </div>
     );
   }

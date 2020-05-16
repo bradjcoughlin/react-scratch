@@ -3,6 +3,7 @@ button#reactionButton {
     font-size: 24px;
     line-height: 36px;
     height: 36px;
+    overflow: hidden;
 }
 
 .static {
@@ -29,12 +30,12 @@ button#reactionButton {
 
 .reacting .to-animate {
     animation-name: reacted-anim;
-    animation-duration: 1s;
+    animation-duration: 200ms;
     animation-fill-mode: forwards;
 }
 .unreacting .to-animate {
     animation-name: reacted-anim;
-    animation-duration: 1s;
+    animation-duration: 200ms;
     animation-fill-mode: forwards;
     animation-direction: reverse;
 }
