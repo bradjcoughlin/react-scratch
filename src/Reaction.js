@@ -7,6 +7,8 @@ export default class Reaction extends React.Component {
         this.state = {
             reacted: false,
             reactedClass: '',
+            reactionCount: 9,
+            nextReactionCount: 10,
         }
     }
     handleClick() {
@@ -21,6 +23,7 @@ export default class Reaction extends React.Component {
                 return {
                     reacted: true,
                     reactedClass: 'reacting',
+                    reactionCount: 10,
                 }
             }
         })
@@ -29,9 +32,14 @@ export default class Reaction extends React.Component {
         console.log('animation ended');
         this.setState((state) => {
             if (state.reacted) {
-                return {reactedClass: 'reacted'}
+                return {
+                    reactedClass: 'reacted',
+                }
             } else {
-                return {reactedClass: 'unreacted'}
+                return {
+                    reactedClass: 'unreacted',
+                    reactionCount: 9,
+                }
             }
         });
     }
@@ -46,8 +54,8 @@ export default class Reaction extends React.Component {
                     className={this.state.reactedClass}>
                         <span>😆</span>
                         <span className='static'>
-                            88
-                            <span className='to-animate'>88</span>
+                            {this.state.reactionCount}
+                            <span className='to-animate'>{this.state.nextReactionCount}</span>
                         </span>
                 </button>
             </div>
