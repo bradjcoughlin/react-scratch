@@ -6,7 +6,7 @@ button#reactionButton {
     overflow: hidden;
 }
 
-.static {
+.count {
     position: relative;
     display: inline-block;
     line-height: 36px;
@@ -14,26 +14,48 @@ button#reactionButton {
 }
 
 .to-animate {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    display: inline-block;
     line-height: 36px;
     height: 36px;
-}
-
-.reacted .to-animate {
-    top: 0%;
-    display: none;
     color: red;
 }
 
-.reacting .to-animate {
+.last-to-animate {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    line-height: 36px;
+    height: 36px;
+    color: red;
+}
+
+.reacted .to-animate,
+.reacted .last-to-animate,
+.unreacted .to-animate,
+.unreacted .last-to-animate {
+    display: none;
+}
+
+.reacting .static {
+    visibility: hidden;
+}
+.reacting .to-animate,
+.reacting .last-to-animate {
+    display: block;
     animation-name: reacted-anim;
     animation-duration: 200ms;
     animation-fill-mode: forwards;
 }
-.unreacting .to-animate {
+.unreacting .static {
+    visibility: hidden;
+}
+.unreacting .to-animate,
+.unreacting .last-to-animate {
+    display: block;
     animation-name: reacted-anim;
     animation-duration: 200ms;
     animation-fill-mode: forwards;

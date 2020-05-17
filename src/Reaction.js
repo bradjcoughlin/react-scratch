@@ -8,11 +8,11 @@ export default class Reaction extends React.Component {
             reacted: false,
             reactedClass: '',
             reactionCount: 9,
+            lastReactionCount: 9,
             nextReactionCount: 10,
         }
     }
     handleClick() {
-        console.log(this);
         this.setState((state) => {
             if (state.reacted) {
                 return {
@@ -29,7 +29,6 @@ export default class Reaction extends React.Component {
         })
     }
     handleAnimationEnded() {
-        console.log('animation ended');
         this.setState((state) => {
             if (state.reacted) {
                 return {
@@ -53,8 +52,9 @@ export default class Reaction extends React.Component {
                     onAnimationEnd={() => this.handleAnimationEnded()}
                     className={this.state.reactedClass}>
                         <span>😆</span>
-                        <span className='static'>
-                            {this.state.reactionCount}
+                        <span className='count'>
+                            <span className='static'>{this.state.reactionCount}</span>
+                            <span className='last-to-animate'>{this.state.lastReactionCount}</span>
                             <span className='to-animate'>{this.state.nextReactionCount}</span>
                         </span>
                 </button>

@@ -10,14 +10,9 @@ class App extends Component{
       <div className="App">
         <h1> Hello, World! </h1>
         <Button/>
-        <hr/>
-        <Reaction/>
-        <Reaction/>
-        <Reaction/>
-        <Reaction/>
-        <Reaction/>
-        <Reaction/>
-        <Reaction/>
+        <div style={{margin: '120px'}}>
+          <Reaction/>
+        </div>
       </div>
     );
   }
