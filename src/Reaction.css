@@ -1,0 +1,67 @@
+button#reactionButton {
+    position: relative;
+    font-size: 24px;
+    line-height: 36px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.count {
+    position: relative;
+    display: inline-block;
+    line-height: 36px;
+    height: 36px;
+}
+
+.to-animate {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    line-height: 36px;
+    height: 36px;
+    color: red;
+}
+
+.last-to-animate {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    line-height: 36px;
+    height: 36px;
+    color: red;
+}
+
+.reacted .to-animate,
+.reacted .last-to-animate,
+.unreacted .to-animate,
+.unreacted .last-to-animate {
+    display: none;
+}
+
+.reacting .static {
+    visibility: hidden;
+}
+.reacting .to-animate,
+.reacting .last-to-animate {
+    display: block;
+    animation-name: reacted-anim;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+.unreacting .static {
+    visibility: hidden;
+}
+.unreacting .to-animate,
+.unreacting .last-to-animate {
+    display: block;
+    animation-name: reacted-anim;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+@keyframes reacted-anim {
+    from {transform:translateY(0%)}
+    to {transform:translateY(-100%)}
+  }

@@ -1,0 +1,22 @@
+button {
+    font-size: 24px;
+}
+
+.fade {
+  animation: fade-in-keyframes 1s;
+}
+@keyframes fade-in-keyframes {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+
+.poop {
+    animation-name: poop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes poop {
+    from {transform:translateY(0px)}
+    to {transform:translateY(100px)}
+  }
