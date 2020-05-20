@@ -13,7 +13,7 @@ button#reactionButton {
     height: 36px;
 }
 
-.to-animate {
+.next-to-animate {
     display: none;
     position: absolute;
     top: 100%;
@@ -33,9 +33,9 @@ button#reactionButton {
     color: red;
 }
 
-.reacted .to-animate,
+.reacted .next-to-animate,
 .reacted .last-to-animate,
-.unreacted .to-animate,
+.unreacted .next-to-animate,
 .unreacted .last-to-animate {
     display: none;
 }
@@ -43,7 +43,7 @@ button#reactionButton {
 .reacting .static {
     visibility: hidden;
 }
-.reacting .to-animate,
+.reacting .next-to-animate,
 .reacting .last-to-animate {
     display: block;
     animation-name: reacted-anim;
@@ -53,7 +53,7 @@ button#reactionButton {
 .unreacting .static {
     visibility: hidden;
 }
-.unreacting .to-animate,
+.unreacting .next-to-animate,
 .unreacting .last-to-animate {
     display: block;
     animation-name: reacted-anim;

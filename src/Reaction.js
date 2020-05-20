@@ -55,7 +55,7 @@ export default class Reaction extends React.Component {
                         <span className='count'>
                             <span className='static'>{this.state.reactionCount}</span>
                             <span className='last-to-animate'>{this.state.lastReactionCount}</span>
-                            <span className='to-animate'>{this.state.nextReactionCount}</span>
+                            <span className='next-to-animate'>{this.state.nextReactionCount}</span>
                         </span>
                 </button>
             </div>
